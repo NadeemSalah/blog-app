@@ -17,20 +17,10 @@ import java.util.Optional;
 @Controller
 @AllArgsConstructor
 @Slf4j
-public class UserController {
+public class RegistrationController {
 
     private final UserService userService;
     private final ConfirmationTokenService confirmationTokenService;
-
-    @GetMapping("/sign-in")
-    String signIn() {
-        return "sign-in";
-    }
-
-    @GetMapping("/sign-up")
-    String signUpPage(final SignUpUserRequest user) {
-        return "sign-up";
-    }
 
     @PostMapping("/sign-up")
     String signUp(@Valid final SignUpUserRequest user) {

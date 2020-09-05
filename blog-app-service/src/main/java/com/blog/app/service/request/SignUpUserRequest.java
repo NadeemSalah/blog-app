@@ -5,6 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 import java.io.Serializable;
 
@@ -19,6 +20,7 @@ public class SignUpUserRequest implements Serializable {
     @NotEmpty
     private String lastName;
     @NotEmpty
+    @Email
     private String email;
     @NotEmpty
     private String password;

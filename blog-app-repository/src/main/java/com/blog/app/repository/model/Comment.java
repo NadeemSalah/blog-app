@@ -17,6 +17,8 @@ public class Comment extends IdentifiableEntity {
 
     @Column
     private String content;
+    @Column
+    private String commenterName;
     @ManyToOne
     @JoinColumn(name = "story_id")
     private BlogStory blogStory;
